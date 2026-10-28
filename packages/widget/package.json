@@ -1,0 +1,23 @@
+{
+  "name": "@whodunit/widget",
+  "version": "0.1.0",
+  "description": "Zero-dependency, accessible <whodunit-form> Web Component for anonymous ping forms",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,iife --global-name WhodunitWidget --dts",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "test": "vitest run"
+  },
+  "keywords": ["whodunit", "widget", "web-component", "custom-element", "anonymous", "form"],
+  "author": "Whodunit Contributors",
+  "license": "MIT"
+}
