@@ -1,0 +1,26 @@
+{
+  "name": "@whodunit/providers",
+  "version": "0.1.0",
+  "description": "Notification providers for Whodunit: ntfy, Pushover, Telegram, Discord, and email",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@whodunit/core": "workspace:*"
+  },
+  "keywords": ["whodunit", "providers", "ntfy", "pushover", "telegram", "discord"],
+  "author": "Whodunit Contributors",
+  "license": "MIT"
+}
