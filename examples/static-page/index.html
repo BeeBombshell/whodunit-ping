@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whodunit — Anonymous Ping Me</title>
+  <meta name="description" content="Somebody pinged you. Nobody knows who. A tiny, portable, privacy-first anonymous ping engine." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.75);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #6366f1;
+      --accent-glow: rgba(99, 102, 241, 0.25);
+      --emerald: #10b981;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+      color: var(--text);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 540px;
+    }
+
+    .brand {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      color: #a5b4fc;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--emerald);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--emerald);
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .tagline {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 1.75rem;
+      box-shadow:
+        0 20px 40px -15px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+      position: relative;
+    }
+
+    whodunit-form {
+      --whodunit-bg: rgba(12, 16, 26, 0.6);
+      --whodunit-text: #f8fafc;
+      --whodunit-muted: #94a3b8;
+      --whodunit-border: rgba(255, 255, 255, 0.12);
+      --whodunit-focus: #818cf8;
+      --whodunit-btn-bg: #6366f1;
+      --whodunit-btn-text: #ffffff;
+      --whodunit-btn-hover: #4f46e5;
+      --whodunit-radius: 12px;
+    }
+
+    .privacy-list {
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .privacy-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .privacy-item svg {
+      color: var(--emerald);
+      flex-shrink: 0;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.825rem;
+      color: #64748b;
+    }
+
+    .footer a {
+      color: #818cf8;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer a:hover {
+      color: #c7d2fe;
+    }
+  </style>
+
+  <!-- Embed Whodunit Widget -->
+  <script type="module" src="../../packages/widget/src/index.ts"></script>
+</head>
+<body>
+  <main class="wrapper">
+    <div class="brand">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Zero telemetry · 100% private
+      </div>
+      <h1>Whodunit</h1>
+      <p class="tagline">Somebody pinged you. Nobody knows who.</p>
+    </div>
+
+    <section class="card">
+      <whodunit-form
+        endpoint="http://localhost:3000/ping"
+        placeholder="Type a completely anonymous message..."
+        button-text="Send Ping"
+        max-length="500"
+      ></whodunit-form>
+
+      <div class="privacy-list">
+        <div class="privacy-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>No IP retention</span>
+        </div>
+        <div class="privacy-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Zero logs saved</span>
+        </div>
+        <div class="privacy-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Daily salt rotation</span>
+        </div>
+        <div class="privacy-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Open source & auditable</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Powered by <a href="https://github.com/your-username/whodunit" target="_blank" rel="noopener">Whodunit</a>.
+      Self-host your own in under 10 minutes.
+    </footer>
+  </main>
+</body>
+</html>

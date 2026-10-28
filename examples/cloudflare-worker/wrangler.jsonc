@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "whodunit-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2024-09-23",
+  "vars": {
+    "PROVIDER": "ntfy",
+    "NTFY_TOPIC": "my-secret-topic",
+    "ALLOWED_ORIGINS": "*"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "RATE_LIMIT_KV",
+      "id": "<your-kv-namespace-id>"
+    }
+  ]
+}

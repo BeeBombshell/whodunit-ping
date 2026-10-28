@@ -1,0 +1,15 @@
+services:
+  whodunit:
+    build:
+      context: ../..
+      dockerfile: examples/docker-compose/Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PROVIDER=ntfy
+      - NTFY_TOPIC=my-secret-topic
+      - ALLOWED_ORIGINS=*
+      - MAX_LENGTH=500
+      - RATE_LIMIT=5
+      - RATE_LIMIT_WINDOW_SEC=3600
