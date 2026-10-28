@@ -1,0 +1,26 @@
+name: Bug Report
+description: Create a report to help us improve Whodunit
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting an issue! Please note that security vulnerabilities should be submitted via `security@whodunit.dev` as detailed in `SECURITY.md`.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Minimal code snippet or runtime environment details.
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime / Deployment
+      placeholder: "e.g., Cloudflare Workers, Node 22, Docker, Deno"
