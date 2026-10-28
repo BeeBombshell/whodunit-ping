@@ -1,0 +1,23 @@
+{
+  "name": "@whodunit/core",
+  "version": "0.1.0",
+  "description": "Portable web-standard request handler and dispatch engine for Whodunit",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "test": "vitest run"
+  },
+  "keywords": ["whodunit", "core", "anonymous", "ping", "web-standards"],
+  "author": "Whodunit Contributors",
+  "license": "MIT"
+}
