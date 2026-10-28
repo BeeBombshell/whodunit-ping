@@ -1,0 +1,20 @@
+{
+  "name": "@whodunit/adapter-deno",
+  "version": "0.1.0",
+  "description": "Deno and Bun runtime adapter for Whodunit",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@whodunit/core": "workspace:*",
+    "@whodunit/providers": "workspace:*"
+  },
+  "keywords": ["whodunit", "adapter", "deno", "bun"],
+  "author": "Whodunit Contributors",
+  "license": "MIT"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@whodunit/adapter-node",
+  "version": "0.1.0",
+  "description": "Standalone Node.js / Docker HTTP server adapter for Whodunit",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "whodunit": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/server.ts --format esm --dts",
+    "dev": "node --watch --loader ts-node/esm src/server.ts",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@whodunit/core": "workspace:*",
+    "@whodunit/providers": "workspace:*"
+  },
+  "keywords": ["whodunit", "adapter", "node", "docker"],
+  "author": "Whodunit Contributors",
+  "license": "MIT"
+}
