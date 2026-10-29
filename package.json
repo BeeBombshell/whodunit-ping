@@ -8,6 +8,7 @@
     "build": "pnpm -r --filter=\"./packages/**\" run build",
     "test": "vitest run",
     "test:watch": "vitest",
+    "pretypecheck": "pnpm build",
     "typecheck": "pnpm -r exec tsc --noEmit",
     "dev:node": "pnpm --filter @whodunit/adapter-node run dev",
     "clean": "pnpm -r exec rm -rf dist node_modules"
