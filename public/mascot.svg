@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none" role="img" aria-label="Whodunit Mascot">
+  <!-- 8-point evidence-tape yellow starburst -->
+  <g transform="translate(60, 68)">
+    <polygon points="
+      0,-44 12,-16 42,-30 22,-2
+      44,12 16,16 26,44 0,24
+      -26,44 -16,16 -44,12 -22,-2
+      -42,-30 -12,-16
+    " fill="#ffd60a" stroke="#15181c" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Eyes -->
+    <circle cx="-9" cy="0" r="3.2" fill="#15181c"/>
+    <circle cx="9" cy="0" r="3.2" fill="#15181c"/>
+  </g>
+
+  <!-- Detective Fedora Hat tilted atop the starburst -->
+  <g transform="translate(60, 36) rotate(-7)">
+    <!-- Hat Brim -->
+    <ellipse cx="0" cy="14" rx="42" ry="7" fill="#15181c" stroke="#15181c" stroke-width="2"/>
+    <ellipse cx="0" cy="13" rx="40" ry="5.5" fill="#2a2e33"/>
+    
+    <!-- Hat Crown -->
+    <path d="M-22,12 C-22,12 -24,-12 -16,-18 C-8,-23 0,-16 0,-16 C0,-16 8,-23 16,-18 C24,-12 22,12 22,12 Z" fill="#15181c"/>
+    
+    <!-- Fedora Crown Pinch indentation -->
+    <path d="M-10,-12 C-4,-15 4,-15 10,-12" stroke="#2a2e33" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Hat Ribbon / Band in evidence yellow -->
+    <path d="M-21.8,7 C-12,8.5 12,8.5 21.8,7 L22,12 C12,13.5 -12,13.5 -22,12 Z" fill="#ffd60a"/>
+  </g>
+</svg>
