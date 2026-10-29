@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/banner.svg" alt="Whodunit: Somebody pinged you. Nobody knows who." width="100%" />
+  <img src="./public/banner.gif" alt="Whodunit: Somebody pinged you. Nobody knows who." width="100%" />
 </p>
 
 # 🕵️‍♂️ Whodunit
