@@ -13,6 +13,7 @@
     }
   },
   "scripts": {
+    "prebuild": "pnpm --filter @whodunit/providers^... build",
     "build": "tsup src/index.ts --format esm,cjs --dts",
     "dev": "tsup src/index.ts --format esm --watch",
     "test": "vitest run"

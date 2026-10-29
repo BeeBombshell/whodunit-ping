@@ -29,7 +29,21 @@ export function createVercelHandler(env: Record<string, string | undefined> = pr
     salt: env["SALT"] || "whodunit-vercel-salt",
   };
 
-  return createHandler(config, { providers, store, botCheck });
+  const handler = createHandler(config, { providers, store, botCheck });
+
+  return async (req: Request): Promise<Response> => {
+    try {
+      const url = new URL(req.url);
+      if (url.pathname === "/health" || url.pathname === "/healthz") {
+        return new Response(JSON.stringify({ status: "healthy", version: "0.1.0" }), {
+          status: 200,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
+    } catch {}
+
+    return handler(req);
+  };
 }
 
 export default createVercelHandler();
