@@ -85,4 +85,6 @@ export interface PingPayload {
   message?: string;
   hp?: string; // Honeypot trap: must be empty
   token?: string; // Bot challenge response token
+  demo?: boolean; // If true, simulated demo mode (delivers only on-page, no notification push)
 }
+

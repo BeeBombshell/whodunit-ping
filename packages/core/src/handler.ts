@@ -93,6 +93,19 @@ export function createHandler(config: Config = {}, deps: HandlerDeps) {
       }
     }
 
+    // 10b. Demo mode check: if request is a demo, acknowledge success without notifying real providers
+    const reqUrl = new URL(req.url, "http://localhost");
+    const isDemo = Boolean(
+      body.demo ||
+      req.headers.get("x-whodunit-demo") === "true" ||
+      reqUrl.searchParams.get("demo") === "1" ||
+      reqUrl.searchParams.get("demo") === "true"
+    );
+    if (isDemo) {
+      const res = new Response(null, { status: 204 });
+      return applyCorsHeaders(res, req, config);
+    }
+
     // 11. Multi-provider dispatch
     if (!deps.providers || deps.providers.length === 0) {
       const res = jsonResponse(500, { error: "no_providers_configured" });

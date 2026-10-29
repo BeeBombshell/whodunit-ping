@@ -127,4 +127,17 @@ describe("createHandler", () => {
     expect(res.status).toBe(503);
     expect(mockProvider.send).not.toHaveBeenCalled();
   });
+
+  it("processes demo messages without dispatching to providers", async () => {
+    const handler = createHandler({}, { providers: [mockProvider], store });
+    const req = new Request("https://api.example.com/ping?demo=1", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Whodunit-Demo": "true" },
+      body: JSON.stringify({ message: "Demo test ping", demo: true }),
+    });
+
+    const res = await handler(req);
+    expect(res.status).toBe(204);
+    expect(mockProvider.send).not.toHaveBeenCalled();
+  });
 });
