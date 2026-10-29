@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./public/banner.svg" alt="Whodunit: Somebody pinged you. Nobody knows who." width="100%" />
+</p>
+
 # 🕵️‍♂️ Whodunit
 
 > *"Somebody pinged you. Nobody knows who."*
