@@ -5,12 +5,13 @@
   "description": "Somebody pinged you. Nobody knows who. A tiny, portable, privacy-first anonymous ping engine.",
   "type": "module",
   "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:node": "pnpm --filter @whodunit/adapter-node run dev",
     "build": "pnpm -r --filter=\"./packages/**\" run build",
     "test": "vitest run",
     "test:watch": "vitest",
     "pretypecheck": "pnpm build",
     "typecheck": "pnpm -r exec tsc --noEmit",
-    "dev:node": "pnpm --filter @whodunit/adapter-node run dev",
     "clean": "pnpm -r exec rm -rf dist node_modules"
   },
   "packageManager": "pnpm@10.33.0",

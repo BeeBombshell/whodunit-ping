@@ -1,5 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/demo", "destination": "https://beebombshell.com/ping", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/ping", "destination": "/api/ping" },
     { "source": "/health", "destination": "/api/ping" }
