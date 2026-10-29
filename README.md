@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/banner.gif" alt="Whodunit: Somebody pinged you. Nobody knows who." width="100%" />
+  <img src="./public/banner.png" alt="Whodunit: Somebody pinged you. Nobody knows who." width="100%" />
 </p>
 
 # 🕵️‍♂️ Whodunit
@@ -120,16 +120,16 @@ Drop `<whodunit-form>` into your webpage:
 ></whodunit-form>
 ```
 
-Style it with CSS custom properties:
+Style it with the case-file design tokens or custom CSS variables:
 
 ```css
 whodunit-form {
-  --whodunit-bg: #18181b;
-  --whodunit-text: #fafafa;
-  --whodunit-border: #27272a;
-  --whodunit-btn-bg: #6366f1;
-  --whodunit-btn-hover: #4f46e5;
-  --whodunit-radius: 12px;
+  --whodunit-bg: #f7f7f5;
+  --whodunit-text: #15181c;
+  --whodunit-border: #15181c;
+  --whodunit-btn-bg: #ffd60a;
+  --whodunit-btn-hover: #e6c109;
+  --whodunit-radius: 0px;
 }
 ```
 
