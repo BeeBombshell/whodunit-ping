@@ -1,19 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
-  <!-- 8-point yellow starburst -->
-  <g transform="translate(32, 38)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none" role="img" aria-label="Whodunit Mascot">
+  <!-- 8-point evidence-tape yellow starburst -->
+  <g transform="translate(60, 68)">
     <polygon points="
-      0,-24 7,-9 23,-16 12,-1
-      24,7 9,9 14,24 0,13
-      -14,24 -9,9 -24,7 -12,-1
-      -23,-16 -7,-9
-    " fill="#ffd60a" stroke="#15181c" stroke-width="2" stroke-linejoin="round"/>
-    <circle cx="-5" cy="0" r="1.8" fill="#15181c"/>
-    <circle cx="5" cy="0" r="1.8" fill="#15181c"/>
+      0,-44 12,-16 42,-30 22,-2
+      44,12 16,16 26,44 0,24
+      -26,44 -16,16 -44,12 -22,-2
+      -42,-30 -12,-16
+    " fill="#ffd60a" stroke="#15181c" stroke-width="3.2" stroke-linejoin="round" stroke-linecap="round"/>
+    <!-- Eyes -->
+    <circle cx="-9" cy="0" r="3.2" fill="#15181c"/>
+    <circle cx="9" cy="0" r="3.2" fill="#15181c"/>
   </g>
-  <!-- Detective hat -->
-  <g transform="translate(32, 19) rotate(-7)">
-    <ellipse cx="0" cy="8" rx="23" ry="4" fill="#15181c"/>
-    <path d="M-12,7 C-12,7 -13,-6 -9,-10 C-4,-13 0,-9 0,-9 C0,-9 4,-13 9,-10 C13,-6 12,7 12,7 Z" fill="#15181c"/>
-    <path d="M-11.8,4 C-6,5 6,5 11.8,4 L12,7 C6,8 -6,8 -12,7 Z" fill="#ffd60a"/>
+
+  <!-- Detective Fedora Hat tilted atop the starburst -->
+  <g transform="translate(60, 36) rotate(-7)">
+    <!-- Hat Brim -->
+    <ellipse cx="0" cy="14" rx="42" ry="7" fill="#15181c" stroke="#15181c" stroke-width="2"/>
+    <ellipse cx="0" cy="13" rx="40" ry="5.5" fill="#2a2e33"/>
+    
+    <!-- Hat Crown -->
+    <path d="M-22,12 C-22,12 -24,-12 -16,-18 C-8,-23 0,-16 0,-16 C0,-16 8,-23 16,-18 C24,-12 22,12 22,12 Z" fill="#15181c"/>
+    
+    <!-- Fedora Crown Pinch indentation -->
+    <path d="M-10,-12 C-4,-15 4,-15 10,-12" stroke="#2a2e33" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Hat Ribbon / Band in evidence yellow -->
+    <path d="M-21.8,7 C-12,8.5 12,8.5 21.8,7 L22,12 C12,13.5 -12,13.5 -22,12 Z" fill="#ffd60a"/>
   </g>
 </svg>

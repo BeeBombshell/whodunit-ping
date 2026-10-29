@@ -14,7 +14,9 @@
   <meta name="twitter:image" content="/banner.png" />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" href="/icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -1164,18 +1166,7 @@
   <header class="site-nav">
     <div class="container nav-inner">
       <a href="/" class="brand-link" aria-label="Whodunit Home">
-        <svg class="brand-logo-svg" viewBox="0 0 120 120" fill="none" aria-hidden="true">
-          <g transform="translate(60, 68)">
-            <polygon points="0,-44 12,-16 42,-30 22,-2 44,12 16,16 26,44 0,24 -26,44 -16,16 -44,12 -22,-2 -42,-30 -12,-16" fill="#ffd60a" stroke="#15181c" stroke-width="4.5" stroke-linejoin="round"/>
-            <circle cx="-9" cy="0" r="4.2" fill="#15181c"/>
-            <circle cx="9" cy="0" r="4.2" fill="#15181c"/>
-          </g>
-          <g transform="translate(60, 36) rotate(-7)">
-            <ellipse cx="0" cy="14" rx="42" ry="7" fill="#15181c"/>
-            <path d="M-22,12 C-22,12 -24,-12 -16,-18 C-8,-23 0,-16 0,-16 C0,-16 8,-23 16,-18 C24,-12 22,12 22,12 Z" fill="#15181c"/>
-            <path d="M-21.8,7 C-12,8.5 12,8.5 21.8,7 L22,12 C12,13.5 -12,13.5 -22,12 Z" fill="#ffd60a"/>
-          </g>
-        </svg>
+        <img src="/mascot.svg" alt="Whodunit Mascot" class="brand-logo-svg" width="32" height="32" />
         <span class="brand-wordmark">whodunit</span>
       </a>
 
@@ -1219,18 +1210,7 @@
           <div class="stage-label" aria-hidden="true">EVIDENCE · DO NOT CROSS</div>
 
           <!-- Peeking Detective Mascot (Nice-to-have) -->
-          <svg class="peeking-mascot" viewBox="0 0 120 120" fill="none" aria-hidden="true">
-            <g transform="translate(60, 68)">
-              <polygon points="0,-44 12,-16 42,-30 22,-2 44,12 16,16 26,44 0,24 -26,44 -16,16 -44,12 -22,-2 -42,-30 -12,-16" fill="#ffd60a" stroke="#15181c" stroke-width="4.5" stroke-linejoin="round"/>
-              <circle cx="-9" cy="0" r="4.2" fill="#15181c"/>
-              <circle cx="9" cy="0" r="4.2" fill="#15181c"/>
-            </g>
-            <g transform="translate(60, 36) rotate(-7)">
-              <ellipse cx="0" cy="14" rx="42" ry="7" fill="#15181c"/>
-              <path d="M-22,12 C-22,12 -24,-12 -16,-18 C-8,-23 0,-16 0,-16 C0,-16 8,-23 16,-18 C24,-12 22,12 22,12 Z" fill="#15181c"/>
-              <path d="M-21.8,7 C-12,8.5 12,8.5 21.8,7 L22,12 C12,13.5 -12,13.5 -22,12 Z" fill="#ffd60a"/>
-            </g>
-          </svg>
+          <img src="/mascot.svg" alt="" class="peeking-mascot" aria-hidden="true" width="58" height="58" />
 
           <!-- Case File Card -->
           <div class="case-card">
@@ -1284,11 +1264,7 @@
           <!-- Phone Push Notification (Arrives on send) -->
           <div class="phone-toast" id="phone-toast" aria-live="polite">
             <div class="toast-app-icon" aria-hidden="true">
-              <svg viewBox="0 0 120 120" fill="none">
-                <polygon points="0,-44 12,-16 42,-30 22,-2 44,12 16,16 26,44 0,24 -26,44 -16,16 -44,12 -22,-2 -42,-30 -12,-16" fill="#ffd60a" stroke="#15181c" stroke-width="5" stroke-linejoin="round" transform="translate(60,60) scale(0.7)"/>
-                <circle cx="54" cy="60" r="3" fill="#15181c"/>
-                <circle cx="66" cy="60" r="3" fill="#15181c"/>
-              </svg>
+              <img src="/mascot.svg" alt="" width="26" height="26" aria-hidden="true" />
             </div>
             <div class="toast-content">
               <div class="toast-header">
