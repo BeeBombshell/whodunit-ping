@@ -5,13 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Whodunit — Somebody pinged you. Nobody knows who.</title>
   <meta name="description" content="Whodunit is a tiny, self-hostable form. A visitor writes a message, your phone buzzes. No emails, accounts, cookies or IP addresses are collected." />
+  <link rel="canonical" href="https://whodunit.beebombshell.com/" />
   
+  <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://whodunit.beebombshell.com/" />
   <meta property="og:title" content="Whodunit — Somebody pinged you. Nobody knows who." />
   <meta property="og:description" content="A visitor writes a message, your phone buzzes. No emails, accounts, cookies or IP addresses are collected." />
-  <meta property="og:image" content="/banner.png" />
+  <meta property="og:image" content="https://whodunit.beebombshell.com/banner.png" />
+  <meta property="og:image:secure_url" content="https://whodunit.beebombshell.com/banner.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1280" />
+  <meta property="og:image:height" content="640" />
+  <meta property="og:image:alt" content="Whodunit — Somebody pinged you. Nobody knows who." />
+
+  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="/banner.png" />
+  <meta name="twitter:url" content="https://whodunit.beebombshell.com/" />
+  <meta name="twitter:title" content="Whodunit — Somebody pinged you. Nobody knows who." />
+  <meta name="twitter:description" content="A visitor writes a message, your phone buzzes. No emails, accounts, cookies or IP addresses are collected." />
+  <meta name="twitter:image" content="https://whodunit.beebombshell.com/banner.png" />
+  <meta name="twitter:image:alt" content="Whodunit — Somebody pinged you. Nobody knows who." />
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icon.png" />
@@ -637,9 +651,12 @@
       white-space: nowrap;
     }
 
-    :root[data-theme="dark"] .delivered-stamp,
+    :root[data-theme="dark"] .delivered-stamp {
+      background: rgba(29, 33, 37, 0.94);
+    }
+
     @media (prefers-color-scheme: dark) {
-      .delivered-stamp {
+      :root:not([data-theme="light"]) .delivered-stamp {
         background: rgba(29, 33, 37, 0.94);
       }
     }
@@ -1019,9 +1036,18 @@
       overflow: hidden;
     }
 
-    :root[data-theme="dark"] .lineup-wall,
+    :root[data-theme="dark"] .lineup-wall {
+      background-image: repeating-linear-gradient(
+        0deg,
+        rgba(236, 238, 240, 0.18) 0px,
+        rgba(236, 238, 240, 0.18) 2px,
+        transparent 2px,
+        transparent 49px
+      );
+    }
+
     @media (prefers-color-scheme: dark) {
-      .lineup-wall {
+      :root:not([data-theme="light"]) .lineup-wall {
         background-image: repeating-linear-gradient(
           0deg,
           rgba(236, 238, 240, 0.18) 0px,
